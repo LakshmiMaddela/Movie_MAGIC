@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment - {{ booking.movie }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="payment-page">
+
+  <div class="payment-wrapper">
+    <img src="{{ url_for('static', filename=movie.image) }}" class="payment-poster" alt="Movie Poster">
+
+    <h2 class="payment-title">💳 Payment for <span style="color:#ff4a4a;">{{ booking.movie }}</span></h2>
+
+    <div class="payment-details">
+      <p><strong>🎟 Seats:</strong> {{ booking.seats }}</p>
+      <p><strong>🏢 Theater:</strong> {{ booking.theater }}</p>
+      <p><strong>🕒 Show Time:</strong> {{ booking.time }}</p>
+      <p><strong>💰 Total Price:</strong> ₹{{ booking.price }}</p>
+    </div>
+
+    <div class="upi-section">
+      <h4>📱 Scan & Pay</h4>
+      <img src="{{ url_for('static', filename='qr.png') }}" class="qr-code" alt="QR Code">
+      <p>UPI ID: <strong>moviemagic@upi</strong></p>
+    </div>
+
+    <form action="{{ url_for('payment', booking_id=booking.booking_id) }}" method="post">
+      <button type="submit" class="btn-pay">✅ Pay Now</button>
+    </form>
+  </div>
+
+</body>
+</html>

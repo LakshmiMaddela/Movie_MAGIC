@@ -1,0 +1,2017 @@
+/* static/styles.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flash-message {
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.movie-card {
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.movie-card h3 {
+  margin-bottom: 10px;
+}
+
+.index-page .overlay {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #000000aa, #000000dd), url('/static/bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.index-page .container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Seat grid (used in seating.html) */
+.seat-grid div {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.seat {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 4px;
+  background: #ccc;
+  color: #333;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.seat:hover {
+  background: #bbb;
+}
+
+.selected {
+  background: #28a745;
+  color: #fff;
+}
+
+.logout {
+  background: #dc3545;
+}
+
+.logout:hover {
+  background: #b52a3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.seat:hover {
+  background-color: #bbb;
+}
+
+.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* Add this to static/styles.css */
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+h2 {
+  color: #28a745;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 20px 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.logout {
+  background-color: #dc3545;
+}
+
+.logout:hover {
+  background-color: #b52a3c;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.seat-grid {
+  text-align: center;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat:hover {
+  background-color: #bbb;
+}
+
+.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+h2 {
+  color: #28a745;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.logout {
+  background-color: #dc3545;
+}
+
+.logout:hover {
+  background-color: #b52a3c;
+}
+/* General layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+h1, h2 {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.logout {
+  background-color: #dc3545;
+}
+
+.logout:hover {
+  background-color: #b02a37;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Movie cards on home.html */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.movie-card {
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.movie-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Seat grid (seating.html) */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat:hover {
+  background-color: #bbb;
+}
+
+.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Dashboard table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+/* static/styles.css */
+
+body.index-page {
+  background-image: url("/static/index_bg.jpg");  /* ✅ Correct path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-box h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.welcome-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* Backgrounds */
+body.login-page {
+  background-image: url("/static/login_bg.jpg");  /* Add your own image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.register-page {
+  background-image: url("/static/register_bg.jpg");  /* Add your own image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shared Auth Box Style */
+.auth-box {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-box .btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.flash-message {
+  color: #b52a3c;
+  margin-bottom: 10px;
+}
+/* ===== Background ===== */
+body.home-page {
+  background-image: url("/static/home_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* ===== Title ===== */
+.green-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: limegreen;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  width: 300px;
+  max-width: 90%;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Movie Grid ===== */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 40px 60px;
+  justify-items: center;
+}
+
+/* ===== Movie Card (Black Box) ===== */
+.movie-card {
+  background-color: rgba(0, 0, 0, 0.85); /* Black box */
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 350px;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card h3 {
+  font-size: 17px;
+  margin: 10px 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Book Now Button ===== */
+.movie-card .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.movie-card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger-menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  z-index: 1000;
+}
+
+.hamburger-menu.white span {
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== Dropdown Menu ===== */
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.menu-items a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.menu-items a:hover {
+  text-decoration: underline;
+}
+
+body.booking-clean {
+  background-image: url("/static/booking_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-form-container {
+  text-align: center;
+  backdrop-filter: blur(4px); /* Optional soft blur */
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.poster-small {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px black;
+}
+
+.movie-title {
+  font-size: 24px;
+  color: lime;
+  margin-bottom: 10px;
+}
+
+.ticket-price {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: skyblue;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: deepskyblue;
+}
+
+/* ===== Reset ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === Booking Page === */
+.booking-page {
+  background: url("/static/booking_bg.jpg") no-repeat center center / cover;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.booking-wrapper {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.movie-info img.movie-poster {
+  width: 160px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  font-size: 26px;
+  color: #00ff66;
+  margin-bottom: 10px;
+}
+
+.day-options,
+.timing-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.day-btn input,
+.time-btn input {
+  display: none;
+}
+
+.day-btn span,
+.time-btn span {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day-btn input:checked + span,
+.time-btn input:checked + span {
+  background: #1e90ff;
+  color: white;
+  border-color: #1e90ff;
+}
+
+.theater-block {
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.theater-block h4 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.btn-book {
+  background-color: #00ff66;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-book:hover {
+  background-color: #00cc55;
+}
+
+/* ===== Seating Page Background ===== */
+body.seating-page {
+  background-image: url("/static/seating_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* ===== Container Layout ===== */
+.seating-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== Movie Info ===== */
+.movie-info {
+  margin-bottom: 20px;
+}
+
+.poster-small {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+  margin-bottom: 10px;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 6px 0;
+  color: #ff6666;
+}
+
+.theater-name,
+.show-time,
+.price-info {
+  font-size: 16px;
+  margin: 5px 0;
+  color: yellow;
+}
+
+/* ===== Heading ===== */
+.choose-heading {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 18px;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* ===== Seat Grid ===== */
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ===== Seat Button ===== */
+.seat {
+  background-color: black;
+  color: white;
+  border: 2px solid #ccc;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  min-width: 40px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+.seat:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+.seat.selected {
+  background-color: green;
+  font-weight: bold;
+}
+
+/* ===== Confirm Button ===== */
+.btn-confirm {
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 15px;
+}
+
+.btn-confirm:hover {
+  background-color: #eee;
+  transform: scale(1.03);
+}
+
+/* ===== Selected Info ===== */
+.selected-info {
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .seat {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .poster-small {
+    width: 80px;
+    height: 110px;
+  }
+
+  .btn-confirm {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+}
+
+/* ===== Ticket Confirmation Page ===== */
+body.ticket-page {
+  background-image: url("/static/ticket_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 50px 15px;
+  text-align: center;
+}
+
+/* Transparent wrapper — no black box */
+.ticket-wrapper {
+  background-color: transparent;
+  max-width: 520px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Movie poster */
+.ticket-poster {
+  width: 140px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+/* "Booking Confirmed!" */
+.ticket-title {
+  font-size: 24px;
+  color: darkgreen;
+  margin-bottom: 20px;
+}
+
+/* Booking Info */
+.ticket-info p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* ===== Button Column (Vertical Stack) ===== */
+.button-column {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== Shared Button Size & Shape ===== */
+.btn-shared {
+  width: 120px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* White Buttons (Home + Dashboard) */
+.btn-white {
+  background-color: white;
+  color: black;
+}
+.btn-white:hover {
+  background-color: #e0e0e0;
+}
+
+/* Red Logout Button */
+.btn-red {
+  background-color: red;
+  color: white;
+}
+.btn-red:hover {
+  background-color: #a80000;
+}
+
+/* ===== Dashboard Page Background ===== */
+body.dashboard-page {
+  background-image: url("/static/dashboard_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+/* ===== Dashboard Container ===== */
+.dashboard-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+/* ===== Title ===== */
+.dashboard-title {
+  text-align: center;
+  font-size: 28px;
+  color: #00ffcc;
+  margin-bottom: 30px;
+}
+
+/* ===== Booking Table ===== */
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.booking-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.booking-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== No Bookings Message ===== */
+.no-bookings {
+  text-align: center;
+  font-size: 18px;
+  color: #ffcccb;
+  margin-top: 20px;
+}
+
+/* ===== Buttons ===== */
+.dashboard-buttons {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-mini {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-mini:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.03);
+}
+
+.btn-mini.logout {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.btn-mini.logout:hover {
+  background-color: #c82333;
+}
+
+/* ===== Index Page Background ===== */
+body.index-page {
+  background-image: url("/static/index_bg.jpg"); /* Optional */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Top Navigation Bar ===== */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Optional background */
+}
+
+.nav-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Centered Welcome Box ===== */
+.welcome-box {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* 🖤 Black Title */
+.main-title {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* 🖤 Black Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* 🔘 Sky Blue Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-skyblue {
+  background-color: skyblue;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-skyblue:hover {
+  background-color: deepskyblue;
+  transform: scale(1.05);
+}
+
+/* ===== About Page Styles ===== */
+body.about-page {
+  background-image: url("/static/about_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Remove black box */
+.about-wrapper.no-box {
+  max-width: 960px;
+  padding: 30px 20px;
+}
+
+.about-title {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-shadow: 2px 2px 6px black;
+}
+
+.about-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #eaffff;
+  text-shadow: 1px 1px 3px black;
+}
+
+.about-section {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  color: #ffd700;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 2px black;
+}
+
+.about-section ul li::before {
+  content: "✔";
+  color: #00ffcc;
+  position: absolute;
+  left: 0;
+}
+
+.about-buttons {
+  margin-top: 40px;
+}
+
+.btn-filled {
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-filled:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-intro {
+    font-size: 16px;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+  .about-section ul li {
+    font-size: 15px;
+  }
+
+  .btn-filled {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* === Background Pages === */
+.ticket-page,
+.dashboard-page {
+  background: url("/static/about_bg.jpg") center center / cover no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 40px 15px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* === Wrapper Containers (Transparent) === */
+.ticket-wrapper,
+.dashboard-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 15px;
+  background: none;
+}
+
+/* === Booking Confirmed Title === */
+.ticket-title-green {
+  color: #00ff66;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* === Movie Image === */
+.ticket-movie-img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* === Ticket and Dashboard Details === */
+.ticket-details p,
+.dashboard-block p {
+  font-size: 18px;
+  margin: 8px 0;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* === Dashboard Individual Booking Block === */
+.dashboard-block {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  text-align: left;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* === Action Buttons === */
+.btn-filled {
+  background-color: white;
+  color: black;
+  padding: 10px 22px;
+  margin: 10px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-filled:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 10px 22px;
+  margin: 10px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-red:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .ticket-title-green {
+    font-size: 26px;
+  }
+
+  .ticket-details p,
+  .dashboard-block p {
+    font-size: 16px;
+  }
+
+  .btn-filled,
+  .btn-red {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* === Services Page Background === */
+body.services-page {
+  background: url("/static/services_bg.jpg") center center / cover no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* === Wrapper and Title === */
+.services-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ff69b4;  /* 🎀 Pink heading */
+  text-shadow: 1px 1px 5px black;
+}
+
+/* === Grid Layout === */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 10px;
+}
+
+/* === Service Cards === */
+.service-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 25px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card .icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  margin: 10px 0 10px;
+  font-size: 20px;
+  color: #ff69b4; /* 🎀 Pink title text */
+}
+
+.service-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: white;
+}
+
+/* === Buttons === */
+.service-buttons {
+  margin-top: 40px;
+}
+
+.btn-filled,
+.btn-red {
+  background-color: white;
+  color: black;
+  padding: 10px 22px;
+  margin: 10px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-filled:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: darkred;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Home Page Background === */
+body.home-page {
+  background-image: url("/static/home_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: white;
+}
+
+/* === Title === */
+.green-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 80px;
+  margin-bottom: 25px;
+  color: #00ff66;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* === Search Bar === */
+.search-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.search-bar input {
+  width: 280px;
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* === Movie Grid === */
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  padding: 20px 30px 60px;
+}
+
+/* === Movie Card === */
+.movie-card {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 210px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.movie-card:hover {
+  transform: translateY(-4px);
+}
+
+/* === Movie Image === */
+.movie-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* === Movie Title === */
+.movie-card h3 {
+  font-size: 15px;
+  margin: 8px 0;
+  color: white;
+}
+
+/* === Book Now Button === */
+.movie-card .btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.movie-card .btn:hover {
+  background-color: #0b70cc;
+  transform: scale(1.04);
+}
+
+/* === Hamburger Menu === */
+.hamburger-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+.menu-items a {
+  display: block;
+  color: black;
+  padding: 6px 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+  .movie-card {
+    width: 28%;
+  }
+}
+@media (max-width: 768px) {
+  .movie-card {
+    width: 42%;
+  }
+}
+@media (max-width: 500px) {
+  .movie-card {
+    width: 90%;
+  }
+}
+/* === Hamburger Menu Icon === */
+.hamburger-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* === Compact Dropdown Menu Box === */
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 6px 10px;
+  border-radius: 5px;
+  width: 120px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* === Menu Links === */
+.menu-items a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 5px 0;
+  transition: background 0.2s ease;
+}
+
+.menu-items a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+/* ===== Payment Page ===== */
+body.payment-page {
+  background-image: url("/static/payment_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.payment-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.payment-poster {
+  width: 140px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 6px rgba(255,255,255,0.3);
+}
+
+.payment-title {
+  font-size: 24px;
+  color: #00ffaa;
+  margin-bottom: 20px;
+}
+
+.payment-details p {
+  font-size: 17px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.upi-section {
+  margin: 30px 0;
+}
+
+.qr-code {
+  width: 160px;
+  margin: 12px auto;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+.btn-pay {
+  background-color: gray;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-pay:hover {
+  background-color: #222;
+}
+
+.button-column {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-shared {
+  width: 140px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* Button Colors */
+.btn-white {
+  background-color: white;
+  color: black;
+}
+.btn-white:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-green {
+  background-color: limegreen;
+  color: white;
+}
+.btn-green:hover {
+  background-color: green;
+}
+
+.dashboard-ticket-box {
+  border: 1px solid #ccc;
+  background: #f9f9f9; /* Light background */
+  padding: 15px;
+  margin: 15px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: black; /* Black text */
+}
+
+.dashboard-ticket-box p {
+  color: black; /* Ensure paragraph text is black */
+  margin: 6px 0;
+  font-size: 16px;
+}
+.clear-history-right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.btn-download {
+  display: inline-block;
+  padding: 6px 10px; /* Smaller size */
+  background-color: #007bff; /* Blue fill */
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-clear-history {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-clear-history:hover {
+  background-color: darkred;
+}
+.total-bookings {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}

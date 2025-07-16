@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Confirmation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="ticket-page">
+
+  <div class="ticket-wrapper">
+    <!-- Movie Poster -->
+    <img src="{{ url_for('static', filename=movie.image) }}" class="ticket-poster" alt="Movie Poster">
+
+    <!-- Booking Confirmed Title -->
+    <h2 class="ticket-title">✅ Booking Confirmed!</h2>
+
+    <!-- Ticket Info -->
+    <div class="ticket-info">
+      <p><strong>🎬 Movie:</strong> {{ booking.movie }}</p>
+      <p><strong>🏢 Theater:</strong> {{ booking.theater }}</p>
+      <p><strong>🕒 Time:</strong> {{ booking.time }}</p>
+      <p><strong>🎟 Seats:</strong> {{ booking.seats }}</p>
+      <p><strong>💰 Total Price:</strong> ₹{{ booking.price }}</p>
+    </div>
+
+    <!-- Vertical Buttons: Only Home & Dashboard -->
+    <div class="button-column">
+      <a href="{{ url_for('home') }}" class="btn-shared btn-white">🏠 Home</a>
+      <a href="{{ url_for('dashboard') }}" class="btn-shared btn-white">📋 Dashboard</a>
+      <a href="{{ url_for('download_ticket', booking_id=booking.booking_id) }}" class="btn-shared btn-green">⬇️ Download Ticket</a>
+    </div>
+  </div>
+
+</body>
+</html>

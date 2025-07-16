@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Tickets - {{ movie.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="booking-page">
+
+  <div class="booking-wrapper">
+
+    <!-- Movie Info -->
+    <div class="movie-info">
+      <img src="{{ url_for('static', filename=movie.image) }}" alt="{{ movie.title }}" class="movie-poster">
+      <h2 class="movie-title">🎟️ Booking for {{ movie.title }}</h2>
+      <p><strong>💰 Price Per Ticket:</strong> ₹{{ movie.price }}</p>
+    </div>
+
+    <form method="POST">
+
+      <!-- Select Day -->
+      <h3 style="color: white; margin-top: 30px;">📅 Select Day</h3>
+      <div class="day-options">
+        {% for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %}
+        <label class="day-btn">
+          <input type="radio" name="day" value="{{ day }}" required>
+          <span>{{ day }}</span>
+        </label>
+        {% endfor %}
+      </div>
+
+      <!-- Theater Blocks -->
+      {% set theaters = [
+        "Manasa Theatre, Kavali",
+        "Latha Theatre, Kavali",
+        "Sravanthi Theatre, Kavali",
+        "Venkateswara Theatre, Kavali"
+      ] %}
+      
+      <h3 style="color: white; margin-top: 40px;">🏢 Select Theater and Show Time</h3>
+
+      {% for theater in theaters %}
+      <div class="theater-block">
+        <h4>{{ theater }}</h4>
+        <div class="timing-options">
+          {% for time in ["6:00 AM", "11:30 AM", "4:00 PM", "10:30 PM"] %}
+            <label class="time-btn">
+              <input type="radio" name="show_time" value="{{ theater }}|{{ time }}" required>
+              <span>{{ time }}</span>
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+      <!-- Continue Button -->
+      <div style="text-align: center; margin-top: 30px;">
+        <button type="submit" class="btn-book">🔘 Continue to Seat Selection</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

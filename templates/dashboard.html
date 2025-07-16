@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-wrapper">
+
+    <!-- 🔔 Centered Thank You Message -->
+    <h2 style="text-align:center; color: white;">
+      📝 Thank you for booking with Movie Magic, {{ user.name }}!<br>
+      <small style="font-size: 16px;">We appreciate your love for cinema.</small>
+    </h2>
+    <!-- 🧮 Total Bookings -->
+<h3 class="total-bookings">
+  📊 Total Bookings: {{ total_bookings }}
+</h3>
+
+    <!-- 🗑️ Clear History Button on top-right -->
+    <div class="clear-history-right">
+      <form action="{{ url_for('clear_history') }}" method="post" onsubmit="return confirm('Are you sure you want to clear your booking history?');">
+        <button type="submit" class="btn-clear-history">🗑️ Clear History</button>
+      </form>
+    </div>
+
+    <h1 class="dashboard-title">📁 Your Tickets</h1>
+
+    {% if bookings %}
+      {% for booking in bookings %}
+        <div class="dashboard-ticket-box">
+          <p><strong>Booking ID:</strong> {{ booking.booking_id }}</p>
+          <p><strong>🎬 Movie:</strong> {{ booking.movie }}</p>
+          <p><strong>🏢 Theater:</strong> {{ booking.theater }}</p>
+          <p><strong>⏰ Time:</strong> {{ booking.time }}</p>
+          <p><strong>💺 Seats:</strong> {{ booking.seats }}</p>
+          <p><strong>💰 Total Price:</strong> ₹{{ booking.price }}</p>
+          <a href="{{ url_for('download_ticket', booking_id=booking.booking_id) }}" class="btn-download">⬇️ Download PDF</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p style="text-align:center; color:white;">No bookings yet.</p>
+    {% endif %}
+
+    <div class="ticket-actions">
+      <a href="/" class="btn-filled">🏠 Home</a>
+      <a href="/logout" class="btn-red">🔓 Logout</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

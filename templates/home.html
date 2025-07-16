@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Magic - Now Showing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu-items');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function filterMovies() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const movies = document.getElementsByClassName('movie-card');
+      for (let movie of movies) {
+        const title = movie.querySelector('h3').textContent.toLowerCase();
+        movie.style.display = title.includes(query) ? 'block' : 'none';
+      }
+    }
+  </script>
+</head>
+<body class="home-page">
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu white">
+    <span onclick="toggleMenu()">☰</span>
+    <div id="menu-items" class="menu-items white-bg">
+      <a href="{{ url_for('dashboard') }}">📋 Dashboard</a>
+      <a href="{{ url_for('logout') }}">🔓 Logout</a>
+    </div>
+  </div>
+
+  <h1 class="green-title">🎬 Welcome to Movie Magic - Now Showing</h1>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="filterMovies()" placeholder="Search movies...">
+  </div>
+
+  <div class="movie-grid">
+    {% for movie in movies %}
+    <div class="movie-card">
+      <img src="{{ url_for('static', filename=movie.image) }}" alt="{{ movie.title }}">
+      <h3>{{ movie.title }}</h3>
+      <a href="{{ url_for('booking', title=movie.title) }}" class="btn">Book Now</a>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+</html> 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Seats - {{ movie.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="seating-page">
+
+  <div class="seating-container">
+
+    <!-- 🎬 Movie Info -->
+    <div class="movie-info">
+      <img src="{{ url_for('static', filename=movie.image) }}" class="poster-small" alt="Movie Poster">
+      <h3 class="movie-title">{{ movie.title }}</h3>
+      <p class="theater-name">🏢 {{ session['theater'] }}</p>
+      <p class="show-time">⏰ {{ session['show_time'] }}</p>
+      <p class="price-info">💰 Price Per Seat: ₹{{ movie.price }}</p>
+    </div>
+
+    <!-- 🎫 Heading -->
+    <h2 class="choose-heading">🎫 Choose Your Seats</h2>
+
+    <!-- 🪑 Seat Grid -->
+    <form method="POST">
+      <div id="seat-grid" class="seat-grid"></div>
+      <input type="hidden" name="seats" id="selectedSeats">
+
+      <!-- ✅ Selected Info -->
+      <div class="selected-info">
+        <p>✅ Selected Seats: <span id="seatList">None</span></p>
+        <p>🎫 Total Selected: <span id="seatCount">0</span></p>
+      </div>
+
+      <button type="submit" class="btn-confirm">🎟️ Confirm Booking</button>
+    </form>
+
+  </div>
+
+  <script>
+    const grid = document.getElementById('seat-grid');
+    const selectedSeats = [];
+    const seatListSpan = document.getElementById('seatList');
+    const seatCountSpan = document.getElementById('seatCount');
+    const selectedSeatsInput = document.getElementById('selectedSeats');
+
+    for (let row = 65; row < 65 + 10; row++) {
+      const r = String.fromCharCode(row);
+      const rowDiv = document.createElement('div');
+      rowDiv.className = 'seat-row';
+
+      for (let col = 1; col <= 12; col++) {
+        const seat = document.createElement('button');
+        seat.type = 'button';
+        seat.className = 'seat';
+        seat.textContent = `${r}${col}`;
+        seat.onclick = function () {
+          seat.classList.toggle('selected');
+          const seatId = seat.textContent;
+          if (selectedSeats.includes(seatId)) {
+            selectedSeats.splice(selectedSeats.indexOf(seatId), 1);
+          } else {
+            selectedSeats.push(seatId);
+          }
+          selectedSeatsInput.value = selectedSeats.join(',');
+          seatListSpan.textContent = selectedSeats.length > 0 ? selectedSeats.join(', ') : 'None';
+          seatCountSpan.textContent = selectedSeats.length;
+        };
+        rowDiv.appendChild(seat);
+      }
+
+      grid.appendChild(rowDiv);
+    }
+  </script>
+</body>
+</html>
