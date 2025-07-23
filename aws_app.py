@@ -60,6 +60,8 @@ def register():
 
         if User.query.filter_by(email=email).first():
             flash('Email already registered.')
+  
+  
         else:
             user = User(name=name, email=email, password=password)
             db.session.add(user)
@@ -243,4 +245,5 @@ def open_browser():
 
 if __name__ == '__main__':
     threading.Timer(1.5, open_browser).start()
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
+
