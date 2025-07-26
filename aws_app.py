@@ -11,7 +11,7 @@ app.secret_key = 'your-aws-secret-key'
 REGION = 'us-east-1'
 USER_TABLE = 'MovieMagicUsers'
 BOOKING_TABLE = 'MovieMagicBookings'
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:604665149129:fixitnow_Topic'
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:619071328642:MovieTicketNotifications:16693b64-ade0-457a-b2c7-40ab3a9ef991'
 
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns = boto3.client('sns', region_name=REGION)
